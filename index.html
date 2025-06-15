@@ -8,7 +8,7 @@
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
-            padding: 20px;
+            padding: 20px 5px;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
             display: flex;
@@ -40,7 +40,7 @@
             border-radius: 15px;
             padding: 20px;
             box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-            max-width: 850px;
+            max-width: 95%;
             width: 100%;
             margin-bottom: 20px;
         }
@@ -63,7 +63,7 @@
         /* Responsive design */
         @media (max-width: 768px) {
             body {
-                padding: 10px;
+                padding: 10px 2px;
             }
             
             .header h1 {
@@ -72,6 +72,7 @@
             
             .calendar-container {
                 padding: 15px;
+                max-width: 98%;
             }
             
             .calendar-frame {
@@ -80,8 +81,17 @@
         }
 
         @media (max-width: 480px) {
+            body {
+                padding: 5px 1px;
+            }
+            
             .header h1 {
                 font-size: 1.5rem;
+            }
+            
+            .calendar-container {
+                padding: 10px;
+                max-width: 99%;
             }
             
             .calendar-frame {
@@ -100,6 +110,20 @@
         <iframe 
             class="calendar-frame"
             src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=Asia%2FBangkok&title=GM1BD59%20Homework&showCalendars=0&showTz=0&showPrint=0&showTabs=0&src=Z20xYmQ1OWhvbWV3b3JrQGdtYWlsLmNvbQ&color=%23039be5" 
+            style="border:solid 1px #777" 
+            frameborder="0" 
+            scrolling="no">
+        </iframe>
+    </div>
+
+    <div class="header" style="margin-top: 30px; margin-bottom: 20px;">
+        <p>Todo List</p>
+    </div>
+
+    <div class="calendar-container">
+        <iframe 
+            class="calendar-frame"
+            src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSDV66y7gY2wE9M-tWirqPUtkWrU6JezB6aZjx21uPjfbsgfAhRgDdFzzE9LSDYABZraGj3jxdpRtZj/pubhtml?gid=0&single=true"
             style="border:solid 1px #777" 
             frameborder="0" 
             scrolling="no">
