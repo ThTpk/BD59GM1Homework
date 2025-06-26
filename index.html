@@ -73,6 +73,57 @@
             overflow: hidden;
         }
 
+        .links-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+            width: 100%;
+        }
+
+        .link-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 12px;
+            padding: 20px;
+            text-decoration: none;
+            color: #333;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border: 2px solid transparent;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .link-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            border-color: rgba(103, 126, 234, 0.3);
+            background: white;
+        }
+
+        .link-icon {
+            font-size: 2rem;
+            flex-shrink: 0;
+        }
+
+        .link-content {
+            flex: 1;
+        }
+
+        .link-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin: 0 0 5px 0;
+            color: #2c3e50;
+        }
+
+        .link-description {
+            font-size: 0.9rem;
+            color: #7f8c8d;
+            margin: 0;
+            line-height: 1.4;
+        }
+
         .footer {
             color: white;
             text-align: center;
@@ -102,6 +153,23 @@
             .map-frame {
                 height: 525px;
             }
+
+            .links-container {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+
+            .link-card {
+                padding: 15px;
+            }
+
+            .link-icon {
+                font-size: 1.5rem;
+            }
+
+            .link-title {
+                font-size: 1.1rem;
+            }
         }
 
         @media (max-width: 480px) {
@@ -124,6 +192,16 @@
 
             .map-frame {
                 height: 450px;
+            }
+
+            .link-card {
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+            }
+
+            .link-icon {
+                font-size: 2rem;
             }
         }
     </style>
@@ -192,6 +270,30 @@
                 box-shadow: 0 2px 4px rgba(0,0,0,0.3);
                 z-index: 10;
             "></div>
+        </div>
+    </div>
+
+    <div class="header" style="margin-top: 30px; margin-bottom: 20px;">
+        <p>🔗 ลิงก์อื่นๆ</p>
+    </div>
+
+    <div class="calendar-container">
+        <div class="links-container">
+            <a href="https://forms.gle/9FjwwjNAH6wrbvt3A" class="link-card" target="_blank" rel="noopener noreferrer">
+                <div class="link-icon">📝</div>
+                <div class="link-content">
+                    <div class="link-title">แบบฟอร์มโพสแหล่งข้อมูลวิชาการ</div>
+                    <div class="link-description">สำหรับส่งข้อมูลและแหล่งข้อมูลทางวิชาการ</div>
+                </div>
+            </a>
+            
+            <a href="https://lookerstudio.google.com/s/tygaSmACWJc" class="link-card" target="_blank" rel="noopener noreferrer">
+                <div class="link-icon">🔍</div>
+                <div class="link-content">
+                    <div class="link-title">หน้าค้นหาแหล่งข้อมูลวิชาการ</div>
+                    <div class="link-description">ค้นหาและเรียกดูแหล่งข้อมูลทางวิชาการ</div>
+                </div>
+            </a>
         </div>
     </div>
 
